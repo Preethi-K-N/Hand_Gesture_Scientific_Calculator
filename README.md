@@ -1,6 +1,6 @@
 # ✋ Hand Gesture Scientific Calculator
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_m5lmafm5lmafm5lm" src="https://github.com/user-attachments/assets/fbc2801c-5a57-431f-9729-0cfecc0d7ad5" />
+<img width="2639" height="1536" alt="Gemini_Generated_Image_m5lmafm5lmafm5lm" src="https://github.com/user-attachments/assets/72fdaed7-6857-44d1-b664-578462bd5c17" />
 
 
 A real-time, touch-free scientific calculator operated through hand gestures detected via webcam. This project leverages **OpenCV** for video processing and **MediaPipe Hands** for robust hand and finger tracking, offering a futuristic and hygienic way to perform complex calculations.
