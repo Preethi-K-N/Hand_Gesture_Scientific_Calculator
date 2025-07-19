@@ -52,16 +52,64 @@ Ideal for:
 
 ---
 
+Markdown
+
+# ✋ Hand Gesture Scientific Calculator
+
+A real-time, touch-free scientific calculator operated through hand gestures detected via webcam. This project leverages **OpenCV** for video processing and **MediaPipe Hands** for robust hand and finger tracking, offering a futuristic and hygienic way to perform complex calculations.
+
+🖐️ **Pinch to click!** No physical contact required.
+
+---
+
+## 🚗 _**Key Applications**_
+Ideal for:
+-   **Enhanced Education**: Interactive STEM learning.
+-   **Sterile Operations**: Touch-free calculations in sensitive environments.
+-   **Advanced UI Demos**: Showcasing cutting-edge gesture control.
+-   **Accessibility**: Hands-free access to complex math.
+-   **Public Engagement**: Innovative interactive displays.
+
+---
+
+## 🚀 **Features**
+
+| Feature                         | Description                                                                 | Status |
+| :------------------------------ | :-------------------------------------------------------------------------- | :----- |
+| **Webcam Input** | Utilizes real-time video stream for gesture detection.                      | ✅     |
+| **Pinch-to-Click Gesture** | Recognizes thumb-to-index finger pinch for button activation.               | ✅     |
+| **Basic Arithmetic** | Supports addition, subtraction, multiplication, and division.               | ✅     |
+| **Scientific Functions** | Includes square root, logarithms (natural and base-10), powers (x^y, x^2, x^3). | ✅     |
+| **Trigonometric Functions** | Sine, Cosine, Tangent, and their inverse (arcsin, arccos, arctan).        | ✅     |
+| **Hyperbolic Functions** | Sinh, Cosh, Tanh.                                                           | ✅     |
+| **Factorial** | `fact()` function for calculating factorials.                               | ✅     |
+| **Constants** | `pi` (π) and `e`.                                                           | ✅     |
+| **Memory Operations** | `M+`, `M-`, `MR` (Memory Recall), `MC` (Memory Clear).                   | ✅     |
+| **Angle Mode Toggle** | Switch between **Radians** and **Degrees** for trigonometric calculations. | ✅     |
+| **Clear Functions** | `C` (Clear All), `CE` (Clear Entry / Backspace).                          | ✅     |
+| **Error Handling** | Displays "Error," "Domain Error," or "Div by Zero" for invalid operations. | ✅     |
+| **Intuitive UI** | Organized button layout with visual feedback for clicks.                    | ✅     |
+
+---
+
+## 🛠️ **Technologies Used**
+
+* **Python 3.9+**: The core programming language.
+* **OpenCV (`opencv-python`)**: For real-time video capture, frame manipulation, and drawing the calculator UI.
+* **MediaPipe Hands (`mediapipe`)**: A powerful framework for accurate hand landmark detection and tracking.
+* **NumPy (`numpy`)**: Utilized for numerical operations, particularly in calculating distances between hand landmarks.
+* **Python `math` Module**: Provides mathematical functions and constants for evaluating expressions.
+
+---
+
 ## 🧠 **How It Works**
 
-1.  **Hand Landmark Detection**: MediaPipe processes the webcam feed to detect a single hand and pinpoint 21 key **landmarks** on it.
-2.  **Gesture Recognition**: Specifically, it tracks the positions of the **Thumb Tip (ID 4)** and **Index Finger Tip (ID 8)**.
-3.  **"Pinch" Detection**: The Euclidean distance between these two finger tips is continuously calculated. If this distance falls below a predefined `pinch_threshold`, it's registered as a "pinch" gesture, simulating a button click.
-4.  **Button Interaction**: When a pinch is detected, the coordinates of the index finger tip determine which calculator button is being "pressed."
-5.  **Expression Evaluation**: The `expression` string is updated based on button presses. When the `=` button is "clicked," the `calculate_expression()` function securely evaluates the mathematical string using a controlled `eval()` environment, preventing arbitrary code execution.
-6.  **Dynamic UI**: The calculator interface, including buttons, display, and an icon, is drawn directly onto the video frame using OpenCV. Visual feedback (button highlighting) is provided on hover and click.
-7.  **Angle Mode Handling**: Trigonometric and inverse trigonometric functions dynamically adjust their behavior based on the `angle_mode` (radians or degrees), which can be toggled via a dedicated button.
-8.  **Memory Functions**: `M+`, `M-`, `MR`, and `MC` buttons interact with a `memory` variable, allowing users to store and recall results.
+1.  **Hand Tracking**: MediaPipe detects 21 hand landmarks from webcam input.
+2.  **Gesture-to-Click**: A "pinch" gesture (thumb-index tip proximity) is recognized as a button click.
+3.  **UI Interaction**: The index finger's position during a pinch determines the selected calculator button.
+4.  **Expression Processing**: Button presses update the display; pressing `=` triggers secure evaluation of the mathematical expression.
+5.  **Dynamic Display**: OpenCV renders the calculator UI with real-time visual feedback (button highlighting).
+6.  **Functionality**: Supports scientific calculations, angle mode toggling (radians/degrees), and memory operations, adapting behavior dynamically based on user input.
 
 ---
 
@@ -113,7 +161,7 @@ Ideal for:
 
 ## 📸 **UI Preview**
 
-*(Insert a screenshot or GIF of the scientific calculator UI in action here, similar to the original README's UI Preview)*
+![Untitled video - Made with Clipchamp](https://github.com/user-attachments/assets/f0bc2cc1-1ebb-41e0-accc-387a89d09a94)
 
 ---
 
